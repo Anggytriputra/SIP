@@ -13,8 +13,12 @@ class EmployeeController extends Controller
     }
 
     public function storeEmployee(Request $request)
+
     {
+        
         try {
+            // dd($request->all());
+
             $validatedData = $request->validate([
                 'firstname' => 'required|string',
                 'lastname' => 'required|string',
